@@ -30,11 +30,11 @@ def mean_squared_error(y_true, y_pred):
     return np.mean((y_true - y_pred) ** 2)
 
 # Load your data
-data = pd.read_csv('dataset/cleanedData.csv')
+data = pd.read_csv('dataset/yo.csv')
 
 # Prepare the data
 X = data.drop('price', axis=1).values
-y = (data['price'].values)/10000
+y = (data['price'].values)
 
 # Fit the model
 theta = fit_linear_regression(X, y)
